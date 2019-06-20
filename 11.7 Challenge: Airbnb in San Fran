@@ -1,0 +1,50 @@
+
+1. What's the most expensive listing? What else can you tell me about the listing?
+
+SELECT id, name, price, neighbourhood, host_name, host_id, latitude, longitude, room_type, minimum_nights, number_of_reviews, last_review, reviews_per_month, calculated_host_listings_count, availability_365
+FROM sfo_listings
+ORDER BY price DESC
+LIMIT 1
+
+id:                "24650875"
+name:              "Full House Victorian: 7500 SqFt, 4 Floors, Hot Tub"
+price:             "10000"
+neighbourhood:     "Western Addition"
+host_name:         "Sarah"
+host_id:           "6460979"
+latitude:          "37.780230017385364"
+longitude:         "-122.44046111352687"
+room_type:         "Entire home/apt"
+minimum_nights:     2
+number_of_reviews:  3
+last_review:       "2018-05-24"
+reviews_per_month: "1"
+calculated_host_listings_count: 4
+availibility_365:  "18"
+
+
+2. What neighborhoods seem to be the most popular?
+
+select l.neighbourhood, 
+count(case when c.available = 'f' then l.id else null end)::float / count(l.id) 
+from sfo_listings l 
+join sfo_calendar c on (c.listing_id = l.id) 
+group by l.neighbourhood 
+order by 2 desc
+
+"Bernal Heights"	"0.669107366549481"
+"Parkside"	"0.645005984838409"
+"Downtown/Civic Center"	"0.638033843674456"
+"Visitacion Valley"	"0.629173008625063"
+"Glen Park"	"0.624083075563411"
+"Mission"	"0.615938657706556"
+"Castro/Upper Market"	"0.613254553665513"
+"Inner Sunset"	"0.6096"
+
+
+3. What time of year is the cheapest time to go to San Francisco? What about the busiest?
+
+select date_trunc('month', calender_date), avg(replace(replace(price, ',', ''), '$', '')::float) 
+from sfo_calendar 
+group by 1 
+order by 2 desc
