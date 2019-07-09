@@ -1,0 +1,18 @@
+1. What is the goal of EDA (exploratory data analysis)?
+
+The goal of EDA is to explore data to discover insights, identify patterns, establish relationships and trends, and test assumptions. Another goal of EDA is to improve the quality of the data.
+
+
+2. Suppose that you are given a dataset of customer product reviews for an e-commerce company. Each review is scored as a Likert-style survey item where 1 indicates a negative sentiment about the product and a 5 is positive. These reviews are collected on the company's website. 
+
+    a. What problems do you expect to find in the raw data? 
+    
+    I expect that there will be a high number of neutral reviews (score of 3) which doesn't give a lot of information about a product and will likely muddle the data that gives a better representation about how people feel about a product. Since the only thing being scored is how much a person likes a product or not, I'm not sure there will be enough data to draw useful conclusions. Some products may have many reviews, and other products may have none, so it will be difficult to compare similar products. The textual review data will also be widely varied, with possible misspellings, abbreviations, non-textual characters such as emojis, and sarcastic reviews, so extracting sentiments from reviews will be difficult.
+    
+    b. If your task is to build features that give information about customer sentiments, how would you approach this task and what kind of methods would you apply to accomplish it? 
+    
+    If we are looking to match review scores with sentiments, we might want to pull out the most common words associated with each number (ie, amazing for 5 and terrible for 1). Most likely you would want to group all of the same ratings together and look at the top ten most common words used in each of them and try to find a pattern. It might also be useful to find words that appear within one rating and virtually nowhere else.
+    
+    c. Try to identify some potentially useful features that you might derive from the raw data. How would you derive them and how would you assess the usefulness of those features?
+    
+    The most useful feature of the data will likely be positive words associated with higher ratings and negative words associated with lower ratings. This feature might even be able to accurately predict a score based on the verbiage used so reviews without scores can potentially be translated into numerical data. The data will need to be processed in such a way that the number of occurrences of certain words can be counted and compared for each category. Not only will we want to see how frequently words appear in one rating group, we will want to see how rarely those words appear within another rating group.

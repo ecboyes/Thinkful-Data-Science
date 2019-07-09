@@ -1,0 +1,12 @@
+1. Consider the advantages and disadvantages of treating the Rank variable as categorical. Discuss your arguments with your mentor.
+
+If we treat a rank variable as categorical, then we lose the information provided by the diastances between ranks and each rank is treated as a separate category. The information that is lost could provide insight into the meaning of each rank and the relationships those ranks have. On the other hand, treating ranks as categorical can be advantageous sometimes, especially if there are many people/things inside each rank and we need a better way to differentiate between scores, times, etc.
+
+
+2. What are the types of the following variables?
+
+    a. Age - continuous or categorical
+    b. Salary - continuous ratio variable
+    c. Revenue - continuous ratio variable
+    d. Customer type - nominal categorical variable
+    e. Stock price - continuous ratio variable
