@@ -1,0 +1,20 @@
+1. The amount a person will spend on a given site in the next 24 months.
+Regression (any $ amount)
+
+2. What color car someone is going to buy.
+Classification (red, blue, silver, black)
+
+3. How many children a family will have.
+Regression or classificaiton (1, 2, 3, 4, or 5, categorical and numerical)
+
+4. If someone will sign up for a service.
+Classification (yes/no)
+
+5. The number of times someone will get sick in a year.
+Regression or Classification (1, 2, 3, 4, or 5, categorical and numerical)
+
+6. The probability someone will get sick in the next month.
+Regression (probablility is always regression)
+
+7. Which medicine will work best for a given patient.
+Classification (Tylenol, Advil, Motrin, Aspirin)
