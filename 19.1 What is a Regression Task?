@@ -1,0 +1,25 @@
+1. Let's assume that you have World Bank data on financial, economic and social indicators for several countries. You want to measure the factors that affect the level of development in these countries. To this end, you decide to use per capita income as a proxy for the development level, which is defined as the national income divided by the population. You want to use some features in your dataset to predict per capita income. Is this task a classification or a regression task? Why?
+
+This is a regression task because the variable we want to predict (per capita income) is a continuous variable.
+
+
+2. Which of the following arguments are false and why?
+
+- OLS is a special type of linear regression models
+    FALSE - OLS is an optimization algorithm used in linear regression
+    
+- Regression models become useless if they don’t meet the assumptions of linear regression.
+    FALSE - even if a model doesn't meet all the assumptions, it is not necessarily useless. There are ways to balance the biases that come with not meeting assumptions out.
+    
+- Estimation and prediction are the same thing in the context of linear regression models.
+    FALSE - Estimation involves determining the coefficients of features while in the training phase whereas prediction involves determining the value of the outcome variable using an unseen feature value.
+    
+- Linear regression is only one kind of regression model. Regression problems can also be solved with other kind of models like Support Vector Machines or Random Forests.
+    TRUE
+
+
+3. Assume that your project manager wants you to discover which free services your company offers make your customers buy more of your paid services. Formulate this task as a regression problem and write down the potential outcome and features that you’d like to work on.
+
+total expenditure = 𝛼 + 𝛽1𝑋 (dummy variable for free service #2 usage) + 𝛽2𝑋 (dummy variable for free service #2 usage)
+
+The potential outcome of this regression problem is a prediction for which free service that people try is the best predictor of buying a certain paid service or the highest $ amount of paid services. Features could include correlation values for people who have certain free services and certain paid services, lenth of time person has been a customer, demographic data about the customer, etc.
